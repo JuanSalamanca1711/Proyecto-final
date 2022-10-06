@@ -1,0 +1,652 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64693FD6-F5C1-4C0E-9352-5C5F6CEE9EF2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>appShopplant</RootNamespace>
+    <AssemblyName>appShopplant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap.min %281%29.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Presentacion\Admin\css\styles.css" />
+    <Content Include="Presentacion\Admin\EditarA.aspx" />
+    <Content Include="Presentacion\Admin\EditarE.aspx" />
+    <Content Include="Presentacion\Admin\EditarT.aspx" />
+    <Content Include="Presentacion\Admin\EliminarP.aspx" />
+    <Content Include="Presentacion\Admin\imagenes\a.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\aa.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\AAA.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\admin.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\c.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\d.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\E.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\EDT.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\EDTA.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\ET.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\fondoListarClientes.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\fondoListarReclamos.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\fondoResponderReclamos.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\mosaico.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\regg.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\viv.jpg" />
+    <Content Include="Presentacion\Admin\imagenes\vivero.jfif" />
+    <Content Include="Presentacion\Admin\imagenes\viveros-sol-1.jpg" />
+    <Content Include="Presentacion\Admin\ListarClientes.aspx" />
+    <Content Include="Presentacion\Admin\PerdidasProductos.aspx" />
+    <Content Include="Presentacion\Admin\RegistroP.aspx" />
+    <Content Include="Presentacion\Admin\RegistroA.aspx" />
+    <Content Include="Presentacion\Admin\RegistroTareas.aspx" />
+    <Content Include="Presentacion\Admin\RegistroE.aspx" />
+    <Content Include="Presentacion\Admin\Administrador.aspx" />
+    <Content Include="Presentacion\Admin\responderReclamos.aspx" />
+    <Content Include="Presentacion\Anonimo\assets\css\style.css" />
+    <Content Include="Presentacion\Anonimo\assets\demo\chart-area-demo.js" />
+    <Content Include="Presentacion\Anonimo\assets\demo\chart-bar-demo.js" />
+    <Content Include="Presentacion\Anonimo\assets\demo\chart-pie-demo.js" />
+    <Content Include="Presentacion\Anonimo\assets\demo\datatables-demo.js" />
+    <Content Include="Presentacion\Anonimo\assets\img\error-404-monochrome.svg" />
+    <Content Include="Presentacion\Anonimo\assets\img\puerta.jpg" />
+    <Content Include="Presentacion\Anonimo\assets\js\main.js" />
+    <Content Include="Presentacion\Anonimo\assets\scss\Readme.txt" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Presentacion\Anonimo\css\styles.css" />
+    <Content Include="Presentacion\Anonimo\forms\Readme.txt" />
+    <Content Include="Presentacion\Anonimo\General.aspx" />
+    <Content Include="Presentacion\Cliente\codigoAcceso.aspx" />
+    <Content Include="Presentacion\Cliente\css\styles.css" />
+    <Content Include="Presentacion\Cliente\editarDatos.aspx" />
+    <Content Include="Presentacion\Cliente\Imagenes\fondoCliente.jpg" />
+    <Content Include="Presentacion\Cliente\Imagenes\fondoCodigoAcceso.jpg" />
+    <Content Include="Presentacion\Cliente\Imagenes\fondoMostrarDatos.jpg" />
+    <Content Include="Presentacion\Empleados\Imagenes\a.jpg" />
+    <Content Include="Presentacion\Empleados\Imagenes\b.jpg" />
+    <Content Include="Presentacion\Empleados\Imagenes\empleado.jpg" />
+    <Content Include="Presentacion\Empleados\Imagenes\mosaico.jpg" />
+    <Content Include="Presentacion\Empleados\ListarPerdidas.aspx" />
+    <Content Include="Presentacion\Empleados\PerdidasProductos.aspx" />
+    <Content Include="Presentacion\Home\accesoContraseña.aspx" />
+    <Content Include="Presentacion\Home\assets\css\style.css" />
+    <Content Include="Presentacion\Home\assets\img\features.jpg" />
+    <Content Include="Presentacion\Home\assets\img\g.jpg" />
+    <Content Include="Presentacion\Home\assets\img\h.jpg" />
+    <Content Include="Presentacion\Home\assets\img\icn.jpg" />
+    <Content Include="Presentacion\Home\assets\img\logoo.png" />
+    <Content Include="Presentacion\Home\assets\img\logoShop.png" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="Presentacion\Home\assets\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="Presentacion\Home\assets\img\ss.png" />
+    <Content Include="Presentacion\Home\assets\img\w.jpg" />
+    <Content Include="Presentacion\Home\assets\js\main.js" />
+    <Content Include="Presentacion\Home\assets\scss\Readme.txt" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Presentacion\Home\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Presentacion\Home\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Presentacion\Home\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Presentacion\Home\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Presentacion\Home\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.css" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="Presentacion\Home\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Presentacion\Home\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Presentacion\Home\css\styles.css" />
+    <Content Include="Presentacion\Home\forms\Readme.txt" />
+    <Content Include="Presentacion\Home\Home.aspx" />
+    <Content Include="Presentacion\Anonimo\imagenes\abonos-quimicos.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\agro2.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\BANNER-.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\BANNER-2.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\mosaico.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\SIEMBRA-ARBOLES.jpg" />
+    <Content Include="Presentacion\Anonimo\imagenes\viv.jpg" />
+    <Content Include="Presentacion\Anonimo\Insumos.aspx" />
+    <Content Include="Presentacion\Anonimo\js\datatables-simple-demo.js" />
+    <Content Include="Presentacion\Anonimo\js\scripts.js" />
+    <Content Include="Presentacion\Anonimo\Plantas.aspx" />
+    <Content Include="Presentacion\assets\demo\chart-area-demo.js" />
+    <Content Include="Presentacion\assets\demo\chart-bar-demo.js" />
+    <Content Include="Presentacion\assets\demo\chart-pie-demo.js" />
+    <Content Include="Presentacion\assets\demo\datatables-demo.js" />
+    <Content Include="Presentacion\assets\img\error-404-monochrome.svg" />
+    <Content Include="Presentacion\assets\img\puerta.jpg" />
+    <Content Include="Presentacion\Cliente\Cliente.aspx" />
+    <Content Include="Presentacion\css\styles.css" />
+    <Content Include="Presentacion\Admin\EditarP.aspx" />
+    <Content Include="Presentacion\Empleados\Empleado.aspx" />
+    <Content Include="Presentacion\Home\imagenes\abonos-quimicos.jpg" />
+    <Content Include="Presentacion\Home\imagenes\agro2.jpg" />
+    <Content Include="Presentacion\Home\imagenes\BANNER-.jpg" />
+    <Content Include="Presentacion\Home\imagenes\BANNER-2.jpg" />
+    <Content Include="Presentacion\Home\imagenes\f.jpg" />
+    <Content Include="Presentacion\Home\imagenes\fondoMostrarDatos.jpg" />
+    <Content Include="Presentacion\Home\imagenes\fondoRecordarDatos.jpg" />
+    <Content Include="Presentacion\Home\imagenes\mosaico.jpg" />
+    <Content Include="Presentacion\Home\imagenes\regg.jpg" />
+    <Content Include="Presentacion\Home\imagenes\SIEMBRA-ARBOLES.jpg" />
+    <Content Include="Presentacion\Home\imagenes\viv.jpg" />
+    <Content Include="Presentacion\Home\listarDatosOlvidados.aspx" />
+    <Content Include="Presentacion\Home\Login.aspx" />
+    <Content Include="Presentacion\Home\Registrarse.aspx" />
+    <Content Include="Presentacion\js\datatables-simple-demo.js" />
+    <Content Include="Presentacion\js\scripts.js" />
+    <Content Include="Presentacion\Productos\imagenes\CactusArizona.png" />
+    <Content Include="Presentacion\Productos\imagenes\CarnívoraAtrapamoscasPequeña.jpg" />
+    <Content Include="Presentacion\Productos\css\styles.css" />
+    <Content Include="Presentacion\Productos\imagenes\GerberaAmarilla.png" />
+    <Content Include="Presentacion\Productos\imagenes\KalanchoeRosado.png" />
+    <Content Include="Presentacion\Productos\imagenes\LenguaSuegra.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\PlantaCurazao.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\PlantaEspatifilo.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\PrimaveraNaranja.png" />
+    <Content Include="Presentacion\Productos\imagenes\SuculentaFanfare.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\SuculentaRomeo.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\ÁrbolEugenio.jpg" />
+    <Content Include="Presentacion\Productos\imagenes\ÁrbolPitanga.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\adminDatos.cs" />
+    <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clConnection.cs" />
+    <Compile Include="Datos\clUsuarioD.cs" />
+    <Compile Include="Entidades\clAdminE.cs" />
+    <Compile Include="Entidades\clClienteE.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
+    <Compile Include="Entidades\clEnvioCorreoE.cs" />
+    <Compile Include="Entidades\clPerdidaE.cs" />
+    <Compile Include="Entidades\clProductosE.cs" />
+    <Compile Include="Entidades\clTareasE.cs" />
+    <Compile Include="Entidades\clQuejasReclamos.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\clUsuarioL.cs" />
+    <Compile Include="Presentacion\Admin\Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarA.aspx.cs">
+      <DependentUpon>EditarA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarA.aspx.designer.cs">
+      <DependentUpon>EditarA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarE.aspx.cs">
+      <DependentUpon>EditarE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarE.aspx.designer.cs">
+      <DependentUpon>EditarE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarT.aspx.cs">
+      <DependentUpon>EditarT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarT.aspx.designer.cs">
+      <DependentUpon>EditarT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EliminarP.aspx.cs">
+      <DependentUpon>EliminarP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EliminarP.aspx.designer.cs">
+      <DependentUpon>EliminarP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\ListarClientes.aspx.cs">
+      <DependentUpon>ListarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\ListarClientes.aspx.designer.cs">
+      <DependentUpon>ListarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\PerdidasProductos.aspx.cs">
+      <DependentUpon>PerdidasProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\PerdidasProductos.aspx.designer.cs">
+      <DependentUpon>PerdidasProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroP.aspx.cs">
+      <DependentUpon>RegistroP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroP.aspx.designer.cs">
+      <DependentUpon>RegistroP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroA.aspx.cs">
+      <DependentUpon>RegistroA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroA.aspx.designer.cs">
+      <DependentUpon>RegistroA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroTareas.aspx.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroTareas.aspx.designer.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroE.aspx.cs">
+      <DependentUpon>RegistroE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\RegistroE.aspx.designer.cs">
+      <DependentUpon>RegistroE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\responderReclamos.aspx.cs">
+      <DependentUpon>responderReclamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\responderReclamos.aspx.designer.cs">
+      <DependentUpon>responderReclamos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Anonimo.Master.cs">
+      <DependentUpon>Anonimo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Anonimo.Master.designer.cs">
+      <DependentUpon>Anonimo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\General.aspx.cs">
+      <DependentUpon>General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\General.aspx.designer.cs">
+      <DependentUpon>General.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\codigoAcceso.aspx.cs">
+      <DependentUpon>codigoAcceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\codigoAcceso.aspx.designer.cs">
+      <DependentUpon>codigoAcceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\editarDatos.aspx.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\editarDatos.aspx.designer.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\ListarPerdidas.aspx.cs">
+      <DependentUpon>ListarPerdidas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\ListarPerdidas.aspx.designer.cs">
+      <DependentUpon>ListarPerdidas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\PerdidasProductos.aspx.cs">
+      <DependentUpon>PerdidasProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\PerdidasProductos.aspx.designer.cs">
+      <DependentUpon>PerdidasProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Home\accesoContraseña.aspx.cs">
+      <DependentUpon>accesoContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Home\accesoContraseña.aspx.designer.cs">
+      <DependentUpon>accesoContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Insumos.aspx.cs">
+      <DependentUpon>Insumos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Insumos.aspx.designer.cs">
+      <DependentUpon>Insumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Plantas.aspx.cs">
+      <DependentUpon>Plantas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Anonimo\Plantas.aspx.designer.cs">
+      <DependentUpon>Plantas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\Cliente.Master.cs">
+      <DependentUpon>Cliente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente\Cliente.Master.designer.cs">
+      <DependentUpon>Cliente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarP.aspx.cs">
+      <DependentUpon>EditarP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\EditarP.aspx.designer.cs">
+      <DependentUpon>EditarP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\Empleado.aspx.cs">
+      <DependentUpon>Empleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\Empleado.aspx.designer.cs">
+      <DependentUpon>Empleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\Empleado.Master.cs">
+      <DependentUpon>Empleado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\Empleado.Master.designer.cs">
+      <DependentUpon>Empleado.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Home\listarDatosOlvidados.aspx.cs">
+      <DependentUpon>listarDatosOlvidados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Home\listarDatosOlvidados.aspx.designer.cs">
+      <DependentUpon>listarDatosOlvidados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Home\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Home\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Home\Registrarse.aspx.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Home\Registrarse.aspx.designer.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Presentacion\Admin\Administrador.Master" />
+    <Content Include="Presentacion\Cliente\Cliente.Master" />
+    <Content Include="Presentacion\Empleados\Empleado.Master" />
+    <Content Include="Presentacion\Anonimo\Anonimo.Master" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.less" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="Presentacion\Anonimo\assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="Presentacion\Anonimo\forms\contact.php" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Presentacion\Home\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.less" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="Presentacion\Home\assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="Presentacion\Home\forms\contact.php" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62832</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62832/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
